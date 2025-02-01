@@ -10,12 +10,13 @@
 body {
     min-height: 2000px;
     background-color: #151515;
+    overflow-x: hidden;
 
 }
 
 header {
     background-color: #151515;
-    width: 100%;
+    width: 100vw;
     height: 100px;
     display: flex;
     justify-content: center;
@@ -25,7 +26,7 @@ header {
 
 header > img#escudo {
     display: block ;
-    width: 100px;
+    width: 90px;
     margin: auto 1%;
     transform: translate(0px, 20px);
 }
@@ -38,7 +39,7 @@ header > img.outrosheader {
     transition: opacity .5s ease-out, transform 1s ease-out;
     transform: translateY(20px);
     margin: auto 10px;
-    width: 40px;
+    width: 60px;
     filter: grayscale(100%);
     opacity: 0;
 }
@@ -53,19 +54,6 @@ header > img.hide {
     transform: translateY(50px);
 }
 
-
-header > img#fiel{
-    width: 100px;
-}
-
-header > img#universo{
-    width: 100px;
-}
-
-header > img#neo {
-    width: 50px;
-}
-
 div#inib > div > .menua {
     opacity: 1;
 }
@@ -76,39 +64,44 @@ div#inib > div > .menua2 {
 
 div#inib > div{
     opacity: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    display: block;
     background-color: white;
-    width: 100vw;
+    width: 50vw;
     height: 55px;
     transition: .3s ease-in-out;
 }
 
 div#inib > #menu2 {
     opacity: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    display: block;
     background-color: white;
-    width: 100vw;
-    height: 55px;
+    width: 50vw;
+    height: max-content;
     transition: .3s ease-in-out;
     box-shadow: #ADADAD 0px 3px 10px;
 }
 
 div#inib > div > a {
+    display: block;
     text-decoration: none;
     color: #151515;
     font-weight: 600;
-    font-size: .7em;
+    font-size: 1em;
+    padding: 15px 20px;
+    transition: .3s ease-in-out;
+    text-transform: uppercase;
+}
+
+div#inib > div > a:hover {
+    color: white;
+    background-color: #151515;
 }
 
 div#inib {
     display: flex;
     width: 100%;
     height: 100vh;
-    background-image: url('/imagens/NeoQuimicaArena.jpg');
+    background-image: url('#');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
