@@ -9,7 +9,6 @@
 
 body {
     min-height: 2000px;
-    background-color: #151515;
     overflow-x: hidden;
 
 }
@@ -97,12 +96,12 @@ div#inib > div > a:hover {
     background-color: #151515;
 }
 
-div#inib {
-    display: flex;
+body > div {
+    display: block;
+    background-image: url('/imagens/CelularWallpaper.jpg') !important;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     height: 100vh;
-    background-image: url('#');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
 }
