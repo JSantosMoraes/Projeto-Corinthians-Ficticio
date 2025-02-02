@@ -17,17 +17,3 @@ const observer = new IntersectionObserver(entries => {
 imagens.forEach(img => observer.observe(img));
 
 const escudo = document.getElementById('escudo')
-const menu = document.getElementById('menu')
-const menua = document.getElementsByClassName('menua')
-
-
-escudo.addEventListener('click',()=>{
-    if(menu.hasAttribute('id','menu2')){
-
-        menu.removeAttribute('id','menu2')
-        
-    } else {
-
-        menu.setAttribute('id','menu2')
-    }
-})
