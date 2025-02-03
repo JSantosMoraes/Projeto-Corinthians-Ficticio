@@ -17,3 +17,12 @@ const observer = new IntersectionObserver(entries => {
 imagens.forEach(img => observer.observe(img));
 
 const escudo = document.getElementById('escudo')
+const inav = document.getElementById('inav')
+
+escudo.addEventListener('click',()=>{
+    if(inav.hasAttribute('class','off')){
+        inav.removeAttribute('class','off')
+    } else {
+        inav.setAttribute('class','off')
+    }
+})
