@@ -13,6 +13,37 @@ body {
     overflow-x: hidden;
 }
 
+h1 {
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 1em;
+}
+
+div#info {
+    display: flex;
+    position: fixed;
+    transform: translate(50%, 0%);
+    right: 50vw;
+    bottom: 1%;
+    opacity: 0.2;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+}
+
+div#info > img {
+    width: 70px;
+    display: inline-block;
+}
+
+div#info > p {
+    padding: 10px 10px;
+    display: inline-block;
+    color: white;
+    font-size: 0.8em;
+}
+
 header {
     background-color: #151515;
     width: 100vw;
@@ -59,7 +90,6 @@ div#inib {
     background-size: cover;
     width: 100%;
     height: 100vh;
-    transition: .2s ease-in-out;
 }
 
 div#inib > nav.off {
@@ -68,16 +98,15 @@ div#inib > nav.off {
     width: 50vw;
     height: max-content;
     padding-bottom: 10px;
-    transition: .2s ease-in-out;
 }
 
 div#inib > nav {
+    transition: opacity .5s ease-out, transform 1s ease-out;
     background-color: white;
     display: block;
     width: 50vw;
     height: max-content;
     padding-bottom: 10px;
-    transition: .2s ease-in-out;
     box-shadow: #ADADAD 0px 10px 30px;
 }
 
@@ -88,11 +117,43 @@ div#inib > nav > .adomenu {
     font-weight: 700;
     text-transform: uppercase;
     padding: 15px;
-    transition: .2s ease-in-out;
 }
 
 
 div#inib > nav#inav > .adomenu:active {
     color: white;
     background-color: #151515;
+    transition: .2s ease-in-out;
+}
+
+/* Animação para exibir o nav */
+.slide-in-left {
+    animation: slideInLeft 0.2s ease-out forwards;
+}
+
+/* Animação para esconder o nav */
+.slide-out-left {
+    animation: slideOutLeft 0.2s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutLeft {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
 }

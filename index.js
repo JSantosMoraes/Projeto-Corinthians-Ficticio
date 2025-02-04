@@ -1,3 +1,5 @@
+// 30% IA
+
 const imagens = document.querySelectorAll('.outrosheader');
 
 const observer = new IntersectionObserver(entries => {
@@ -16,13 +18,18 @@ const observer = new IntersectionObserver(entries => {
 
 imagens.forEach(img => observer.observe(img));
 
-const escudo = document.getElementById('escudo')
-const inav = document.getElementById('inav')
+const escudo = document.getElementById('escudo');
+const inav = document.getElementById('inav');
 
-escudo.addEventListener('click',()=>{
-    if(inav.hasAttribute('class','off')){
-        inav.removeAttribute('class','off')
+escudo.addEventListener('click', () => {
+    if (inav.classList.contains('off')) {
+        inav.classList.remove('off');
+        inav.classList.add('slide-in-left');
     } else {
-        inav.setAttribute('class','off')
+        inav.classList.add('slide-out-left');
+        setTimeout(() => {
+            inav.classList.remove('slide-out-left');
+            inav.classList.add('off');
+        }, 200); // tempo correspondente à duração da animação
     }
-})
+});
