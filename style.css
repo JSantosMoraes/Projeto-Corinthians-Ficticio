@@ -48,10 +48,10 @@ header {
     background-color: #151515;
     width: 100vw;
     height: 100px;
-    display: flex;
+    display: flex;  
     justify-content: center;
     align-items: center;
-    box-shadow: #ADADAD 0px 2px 40px;
+    box-shadow: #ADADAD 0px 10px 40px;
 }
 
 header > img#escudo {
